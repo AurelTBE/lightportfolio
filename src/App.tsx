@@ -1,3 +1,4 @@
+import Layout from '../components/Layout'
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Technologies from '../components/Technologies';
@@ -6,12 +7,13 @@ import Timeline from '../components/Timeline';
 function App() {
 
   return (
-    <div>
+    <Layout>
       <Hero />
       <Projects />
       <Technologies />
       <Timeline />
-    </div>
+      <Projects />
+    </Layout>
   )
 }
 
