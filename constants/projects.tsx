@@ -7,6 +7,8 @@ export const projects = [
         source: 'https://google.com',
         visit: 'https://google.com',
         id: 0,
+        category: "Front-End",
+        pointOfInterest: 200,
       },
       {
         title: 'E-Commerce',
@@ -16,6 +18,8 @@ export const projects = [
         source: 'https://google.com',
         visit: 'https://google.com',
         id: 1,
+        category: "E-Commerce",
+        pointOfInterest: 150,
       },
       {
         title: 'WebRTC App',
@@ -25,6 +29,8 @@ export const projects = [
         source: 'https://google.com',
         visit: 'https://google.com',
         id: 2,
+        category: "Back-End",
+        pointOfInterest: 220,
       },
       {
         title: 'Unichat',
@@ -34,5 +40,7 @@ export const projects = [
         source: 'https://google.com',
         visit: 'https://google.com',
         id: 3,
+        category: "Full-Stack",
+        pointOfInterest: 200,
       },
 ]
