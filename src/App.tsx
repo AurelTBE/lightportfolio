@@ -3,9 +3,10 @@ import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Technologies from '../components/Technologies';
 import Timeline from '../components/Timeline';
+import Index from './Index';
 import { Project } from "../components/Projects/Project";
 import { List } from "../components/Projects/Projects";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 function Store({ match }:any) {
@@ -26,11 +27,12 @@ function App() {
 
   return (
     <Layout>
-      <Hero />
-      <Projects />
-      <Technologies />
-      <Timeline />
-      <Projects />
+      <AnimateSharedLayout>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Index />} />
+          <Route path="/:id" element={Store} />
+        </Routes>
+      </AnimateSharedLayout>
     </Layout>
   )
 }

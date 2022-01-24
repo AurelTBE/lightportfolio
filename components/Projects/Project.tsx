@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { projects } from "../../constants/projects";
 
 export function Project({ id }:any) {
-  const { category, title, description }:any = projects.find(project => project.id === id);
+  const { category, title, description, image }:any = projects.find(project => project.id === id);
 
   return (
     <>
@@ -23,7 +23,7 @@ export function Project({ id }:any) {
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={`images/${id}.jpg`} alt="" />
+            <img className="card-image" src={image} alt="" />
           </motion.div>
           <motion.div
             className="title-container"

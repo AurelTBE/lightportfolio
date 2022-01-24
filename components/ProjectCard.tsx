@@ -10,29 +10,30 @@ export interface IProject {
     id:          number;
 }
 
-const cardVariants: Variants = {
-    offscreen: {
-      scale: 0
-    },
-    onscreen: {
-      scale: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 0.8,
-        staggerChildren: 0.2,
-        delayChildren:0.5
-      }
-    }
-};
-
 const ProjectCard = ({project}: {project:IProject}) => {
     const {title, image, description, tags, source, visit, id} = project
+
+    const cardVariants: Variants = {
+        offscreen: {
+          scale: 0
+        },
+        onscreen: {
+          scale: 1,
+          transition: {
+            type: "spring",
+            bounce: 0.4,
+            duration: 0.8,
+            delay: id * 0.1
+          }
+        }
+    };
+
     return (
         <motion.div 
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
         >
             <motion.div variants={cardVariants} className='h-full claybg'>
                 <div className='relative mb-6 overflow-hidden shadow-md pb-80'>
